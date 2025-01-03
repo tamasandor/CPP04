@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 17:22:16 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 23:22:09 by atamas           ###   ########.fr       */
+/*   Created: 2025/01/02 17:21:08 by atamas            #+#    #+#             */
+/*   Updated: 2025/01/03 23:23:03 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Cat: public Animal
+
+class Dog: public Animal
 {
+private:
+	Brain *m_brain;
 public:
-	Cat(/* args */);
-	Cat(const Cat &original);
-	Cat &operator= (const Cat &original);
-	~Cat();
+	Dog();
+	Dog(const Dog &original);
+	Dog &operator= (const Dog &original);
+	~Dog();
 	void	makeSound() const;
 };
 

@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 17:22:16 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 23:22:09 by atamas           ###   ########.fr       */
+/*   Created: 2025/01/03 16:39:46 by atamas            #+#    #+#             */
+/*   Updated: 2025/01/03 17:27:31 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#include "WrongAnimal.hpp"
 
-#include "Animal.hpp"
-
-class Cat: public Animal
+class WrongCat: public WrongAnimal
 {
 public:
-	Cat(/* args */);
-	Cat(const Cat &original);
-	Cat &operator= (const Cat &original);
-	~Cat();
-	void	makeSound() const;
+	WrongCat();
+	WrongCat(const WrongCat &original);
+	WrongCat &operator= (const WrongCat &original);
+	void makeSound() const;
+	~WrongCat();
 };
-
-#endif
