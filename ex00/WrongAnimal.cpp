@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:33:39 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 16:39:18 by atamas           ###   ########.fr       */
+/*   Updated: 2025/01/03 22:26:31 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,8 @@ WrongAnimal::WrongAnimal(const WrongAnimal &original)
 WrongAnimal &WrongAnimal::operator = (const WrongAnimal &original)
 {
 	std::cout << "WrongAnimal copy assignment has been called\n";
-	if (this == &original)
-		return (*this);
-	m_type = original.m_type;
+	if (this != &original)
+		m_type = original.m_type;
 	return (*this);
 }
 
