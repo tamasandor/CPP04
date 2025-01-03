@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:18:39 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 16:35:57 by atamas           ###   ########.fr       */
+/*   Updated: 2025/01/03 20:56:17 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,8 @@ Animal::Animal(const Animal &original)
 Animal &Animal::operator = (const Animal &original)
 {
 	std::cout << "Animal copy assignment has been called\n";
-	if (this == &original)
-		return (*this);
-	m_type = original.m_type;
+	if (this != &original)
+		m_type = original.m_type;
 	return (*this);
 }
 
