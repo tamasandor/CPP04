@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:25:45 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 23:24:45 by atamas           ###   ########.fr       */
+/*   Updated: 2025/01/09 13:48:29 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@ void	Dog::makeSound() const
 Dog::Dog()
 {
 	m_brain = new Brain();
-	std::cout << "Dog constructor has beenn called\n";
+	std::cout << "Dog constructor called\n";
 	m_type = "Dog";
 }
 
 Dog::Dog(const Dog &original) : Animal()
 {
-	std::cout << "Dog Copy constructor has been called\n";
+	std::cout << "Dog Copy constructor called\n";
 	if (this != &original)
 		m_type = original.m_type;
 }
 
 Dog &Dog::operator= (const Dog &original)
 {
-	std::cout << "Dog Copy assignment operator has been called\n";
+	std::cout << "Dog Copy assignment operator called\n";
 	if (this != &original)
 	{
 		this->m_brain = new Brain();
@@ -45,5 +45,5 @@ Dog &Dog::operator= (const Dog &original)
 Dog::~Dog()
 {
 	delete m_brain;
-	std::cout << "Dog deconstructor has been called\n";
+	std::cout << "Dog deconstructor called\n";
 }

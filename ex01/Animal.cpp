@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:18:39 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 20:56:17 by atamas           ###   ########.fr       */
+/*   Updated: 2025/01/09 13:47:23 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 Animal::Animal()
 {
 	m_type = "Animal";
-	std::cout << "Animal default constructor has been called\n";
+	std::cout << "Animal default constructor called\n";
 }
 
 Animal::Animal(std::string type)
 {
 	m_type = type;
-	std::cout << "Animal constructor has been called\n";
+	std::cout << "Animal constructor called\n";
 }
 
 Animal::Animal(const Animal &original)
 {
 	m_type = original.m_type;
-	std::cout << "Animal copy constructor has been called\n";
+	std::cout << "Animal copy constructor called\n";
 }
 
 Animal &Animal::operator = (const Animal &original)
 {
-	std::cout << "Animal copy assignment has been called\n";
+	std::cout << "Animal copy assignment\n";
 	if (this != &original)
 		m_type = original.m_type;
 	return (*this);
@@ -40,7 +40,7 @@ Animal &Animal::operator = (const Animal &original)
 
 Animal::~Animal()
 {
-	std::cout << "Animal deconstructor has been called\n";
+	std::cout << "Animal deconstructor called\n";
 }
 
 void Animal::makeSound() const
