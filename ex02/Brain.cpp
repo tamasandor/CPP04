@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 17:22:00 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/09 13:46:56 by atamas           ###   ########.fr       */
+/*   Created: 2025/01/03 22:35:21 by atamas            #+#    #+#             */
+/*   Updated: 2025/01/09 13:42:33 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Brain.hpp"
+#include <iostream>
 
-Cat::Cat()
+Brain::Brain()
 {
-	std::cout << "Cat default constructor called\n";
-	m_type = "Cat";
+	std::cout << "Brain default constructor called\n";
 }
 
-Cat::Cat(const Cat &original) : Animal()
+Brain::Brain(const Brain &original)
 {
-	std::cout << "Cat copy constructor called\n";
+	std::cout << "Brain copy constractor called\n";
 	if (this != &original)
 		*this = original;
 }
 
-Cat &Cat::operator = (const Cat &original)
+Brain &Brain::operator = (const Brain &original)
 {
-	std::cout << "Cat copy assignment operator called\n";
+	std::cout << "Brain copy assignment operator called\n";
 	if (this != &original)
-		this->m_type = original.m_type;
+		return (*this); // here
 	return (*this);
 }
 
-void Cat::makeSound() const
+Brain::~Brain()
 {
-	std::cout << "MeeeeeoooOOOOww!" << '\n';
-}
-
-Cat::~Cat()
-{
-	std::cout << "Cat deconstuctor called\n";
+	std::cout << "Brain deconstructor called\n";
 }
