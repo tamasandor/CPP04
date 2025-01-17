@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 22:35:21 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 23:26:19 by atamas           ###   ########.fr       */
+/*   Updated: 2025/01/13 15:33:02 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 Brain::Brain()
 {
+	for (int i = 0; i < 100; i++)
+	{
+		setIdea("New idea", i);
+	}
 	std::cout << "Brain default constructor has been called\n";
 }
 
@@ -29,11 +33,28 @@ Brain &Brain::operator = (const Brain &original)
 {
 	std::cout << "Brain copy assignment operator has been called\n";
 	if (this != &original)
-		return (*this); // here
+	{
+		for (int i = 0; i < 100; i++)
+			setIdea(getIdea(i), i);
+		return (*this);
+	}
 	return (*this);
 }
 
 Brain::~Brain()
 {
 	std::cout << "Brain deconstructor has been called\n";
+}
+
+void		Brain::setIdea(std::string idea, int index)
+{
+	if (index >= 0 && index < 100)
+		m_ideas[index] = idea;
+}
+
+std::string	Brain::getIdea(int index)
+{
+	if (index >= 0 && index < 100)
+		return (m_ideas[index]);
+	return ("");
 }
