@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 22:35:21 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/17 10:01:50 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/05 19:00:36 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Brain::Brain()
 	{
 		setIdea("New idea", i);
 	}
-	std::cout << "Brain default constructor has been called\n";
+	std::cout << "Brain default constructor called\n";
 }
 
 Brain::Brain(const Brain &original)
