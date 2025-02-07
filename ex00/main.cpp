@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 12:22:53 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/05 18:39:13 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/07 14:42:01 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ int	main()
 	const WrongAnimal* wAnimal = new WrongAnimal();
 	const WrongAnimal* cAnimal = new WrongCat();
 
+	std::cout << "This is an Animal: " << meta->getType() << '\n';
+	std::cout << "This is a cat: " << cat->getType() << '\n';
+	std::cout << "This is a dog: " << dog->getType() << '\n';
+	
 	cat->makeSound();
 	dog->makeSound();
 	meta->makeSound();
