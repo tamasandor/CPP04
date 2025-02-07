@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 12:22:53 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/03 17:33:18 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/07 09:52:34 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int	main()
 {
-	const Animal* meta = new Animal();
+	// const Animal* meta = new Animal();
 	const Animal* i = new Cat();
 	const Animal* j = new Dog();
 	const WrongAnimal* wAnimal = new WrongAnimal();
@@ -26,11 +26,11 @@ int	main()
 
 	i->makeSound();
 	j->makeSound();
-	meta->makeSound();
+	// meta->makeSound();
 	std::cout << "<<Wrong test start from here>>\n\n";
 	wAnimal->makeSound();
 	cAnimal->makeSound();
-	delete meta;
+	// delete meta;
 	delete i;
 	delete j;
 	delete wAnimal;
