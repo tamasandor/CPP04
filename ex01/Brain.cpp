@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
+/*   By: atamas <atamas@stundent.42wolfsburg.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 22:35:21 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/05 19:00:36 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/10 23:03:07 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,16 @@
 Brain::Brain()
 {
 	for (int i = 0; i < 100; i++)
-	{
-		setIdea("New idea", i);
-	}
+		m_ideas[i] = "New idea";
 	std::cout << "Brain default constructor called\n";
 }
 
 Brain::Brain(const Brain &original)
 {
-	std::cout << "Brain copy constractor called\n";
+	std::cout << "Brain copy constructor called\n";
 	if (this != &original)
-		*this = original;
+		for (int i = 0; i < 100; i++)
+			this->m_ideas[i] = original.m_ideas[i];
 }
 
 Brain &Brain::operator = (const Brain &original)
@@ -35,8 +34,7 @@ Brain &Brain::operator = (const Brain &original)
 	if (this != &original)
 	{
 		for (int i = 0; i < 100; i++)
-			setIdea(getIdea(i), i);
-		return (*this);
+			this->m_ideas[i] = original.m_ideas[i];
 	}
 	return (*this);
 }
@@ -44,17 +42,4 @@ Brain &Brain::operator = (const Brain &original)
 Brain::~Brain()
 {
 	std::cout << "Brain deconstructor called\n";
-}
-
-void		Brain::setIdea(std::string idea, int index)
-{
-	if (index >= 0 && index < 100)
-		m_ideas[index] = idea;
-}
-
-std::string	Brain::getIdea(int index)
-{
-	if (index >= 0 && index < 100)
-		return (m_ideas[index]);
-	return ("");
 }

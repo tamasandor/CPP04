@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
+/*   By: atamas <atamas@stundent.42wolfsburg.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 22:35:18 by atamas            #+#    #+#             */
-/*   Updated: 2025/01/13 15:32:25 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/10 23:02:13 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ public:
 	Brain(const Brain &original);
 	Brain &operator= (const Brain &original);
 	~Brain();
-	void		setIdea(std::string idea, int index);
-	std::string	getIdea(int index);
 };
 
 #endif
