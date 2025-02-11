@@ -3,10 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atamas <atamas@stundent.42wolfsburg.de>    +#+  +:+       +#+        */
+/*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:44:11 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/10 19:44:12 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/11 21:51:04 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "AMateria.hpp"
+
+int	main()
+{
+	// AMateria* tmp;
+	return 0;
+}

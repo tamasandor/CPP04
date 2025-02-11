@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:47:12 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/11 00:09:18 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/11 21:45:55 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,17 @@ AMateria::AMateria(std::string const & type)
 AMateria::AMateria(const AMateria &original)
 {
 	std::cout << "AMateria: copy constructor called\n";
+	if (this != &original)
+	{
+		this->m_type = original.m_type;
+	}
 }
 
 AMateria &AMateria::operator = (const AMateria &original)
 {
 	std::cout << "AMateria: copy assignment operator called\n";
 	if (this != &original)
-		*this = original;
+		this->m_type = original.m_type;
 	return (*this);
 }
 
