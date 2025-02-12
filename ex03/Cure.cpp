@@ -1,52 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/10 19:47:12 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/12 20:34:11 by atamas           ###   ########.fr       */
+/*   Created: 2025/02/12 19:57:15 by atamas            #+#    #+#             */
+/*   Updated: 2025/02/12 20:08:13 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Cure.hpp"
 #include <iostream>
 
-AMateria::AMateria(std::string const & type)
+Cure::Cure() : AMateria("cure")
 {
-	m_type = type;
-	std::cout << "AMateria: constructor called\n";
+	std::cout << "Cure: default constructor called\n";
 }
 
-AMateria::AMateria(const AMateria &original)
+Cure::Cure(const Cure &original) : AMateria(original)
 {
-	std::cout << "AMateria: copy constructor called\n";
+	std::cout << "Cure: copy constructor called\n";
 	if (this != &original)
 	{
 		this->m_type = original.m_type;
 	}
 }
 
-AMateria &AMateria::operator = (const AMateria &original)
+Cure &Cure::operator = (const Cure &original)
 {
-	std::cout << "AMateria: copy assignment operator called\n";
+	std::cout << "Cure: copy assignment operator called\n";
 	if (this != &original)
+	{
 		this->m_type = original.m_type;
+	}
 	return (*this);
 }
 
-AMateria::~AMateria()
+Cure::~Cure()
 {
-	std::cout << "AMateria: destructor called\n";
+	std::cout << "Cure: destructor called\n";
 }
 
-std::string const & AMateria::getType() const
+AMateria *Cure::clone() const
 {
-	return (m_type);
+	return (new Cure());
 }
 
-void AMateria::use(ICharacter& target)
+void Cure::use(ICharacter &target)
 {
-	std::cout << "Materia used on " << target.getName() << '\n';
+	std::cout << "* heals " << target.getName() << "'s wounds *\n";
 }
