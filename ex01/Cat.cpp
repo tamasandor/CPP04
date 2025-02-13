@@ -23,7 +23,10 @@ Cat::Cat(const Cat &original) : Animal()
 {
 	std::cout << "Cat copy constructor called\n";
 	if (this != &original)
-		*this = original;
+	{
+		this->m_brain = new Brain(*original.m_brain);
+		this->m_type = original.m_type;
+	}
 }
 
 Cat &Cat::operator = (const Cat &original)
@@ -32,7 +35,7 @@ Cat &Cat::operator = (const Cat &original)
 	if (this != &original)
 	{
 		delete m_brain;
-		this->m_brain = new Brain();
+		this->m_brain = new Brain(*original.m_brain);
 		this->m_type = original.m_type;
 	}
 	return (*this);

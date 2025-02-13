@@ -32,5 +32,9 @@ int	main()
 	{
 		delete zoo[i];
 	}
+	Cat basic;
+{
+Cat tmp = basic;
+}
 	return (0);
 }
