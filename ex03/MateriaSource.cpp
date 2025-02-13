@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 22:29:31 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/12 22:56:39 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/13 18:02:46 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ MateriaSource::~MateriaSource()
 		delete m_materias[i];
 	for (int i = 0; i < 100; i++)
 		delete m_inventory[i];
-
 }
 
 void MateriaSource::learnMateria(AMateria* m)

@@ -6,12 +6,11 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 20:12:42 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/12 22:57:27 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/13 17:57:58 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
-
 
 Character::Character(std::string name)
 {
@@ -29,7 +28,6 @@ Character::Character(const Character &original)
 		delete m_slots[i];
 		this->m_slots[i] = original.m_slots[i]->clone();
 	}
-	
 }
 
 Character &Character::operator = (const Character &original)
@@ -67,7 +65,6 @@ void Character::equip(AMateria* m)
 			return ;
 		}
 	}
-	
 }
 
 void Character::unequip(int idx)
