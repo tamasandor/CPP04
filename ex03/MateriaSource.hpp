@@ -19,6 +19,7 @@ class MateriaSource : public IMateriaSource
 {
 private:
 	AMateria *m_materias[4];
+	AMateria *m_inventory[100];
 public:
 	MateriaSource();
 	MateriaSource(const MateriaSource &original);
