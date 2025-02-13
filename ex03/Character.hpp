@@ -6,7 +6,7 @@
 /*   By: atamas <atamas@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 20:10:04 by atamas            #+#    #+#             */
-/*   Updated: 2025/02/12 20:27:57 by atamas           ###   ########.fr       */
+/*   Updated: 2025/02/13 17:59:33 by atamas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ public:
 	Character(const Character &original);
 	Character &operator= (const Character &original);
 	~Character();
-	std::string const & getName() const;
-	void equip(AMateria* m);
-	void unequip(int idx);
-	void use(int idx, ICharacter& target);
+	std::string const	&getName() const;
+	void				equip(AMateria* m);
+	void				unequip(int idx);
+	void				use(int idx, ICharacter& target);
 };
 
 #endif
